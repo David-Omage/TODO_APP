@@ -1,0 +1,21 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+
+<div class="header-bar">
+    <h1>Login</h1>
+    <a href="{% url 'tasklist' %}">&#8592; Back</a>
+</div>
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Login">
+</form>
+
+
+<p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+
+{% endblock content %}

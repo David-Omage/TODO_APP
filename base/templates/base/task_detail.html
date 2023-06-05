@@ -1,0 +1,18 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+
+<div class="header-bar">
+    <a href="{% url 'tasklist' %}">&#8592; Back</a>
+</div>
+
+
+<h1>Task: {{object}}</h1>
+
+{% if tasks.description %}
+<h2>Description: {{tasks.description}}</h2>
+{% else %}
+<h4>There is no further detail available for this task</h4>
+{% endif %}
+{% endblock content %}
